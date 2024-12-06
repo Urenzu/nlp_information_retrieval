@@ -1,6 +1,6 @@
 Setup (Run within powershell):
 
-(This setup is to get tfidf and word2vec working.)
+(This setup is to get tfidf and word2vec working. Make sure to put the reuters21578 folder in the same directory as the python files. You can find the download here: https://kdd.ics.uci.edu/databases/reuters21578/reuters21578.html)
 
 python -m venv venv
 
