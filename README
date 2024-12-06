@@ -1,0 +1,39 @@
+Setup (Run within powershell):
+
+(This setup is to get tfidf and word2vec working.)
+
+python -m venv venv
+
+.\venv\Scripts\activate
+
+pip install beautifulsoup4
+pip install nltk
+pip install scikit-learn
+pip install numpy
+pip install gensim
+pip install tqdm
+pip install torch
+pip install rich
+
+python
+
+import nltk
+
+nltk.download('all')
+
+exit()
+
+----------------------------------------------------------------------------------------------------
+
+TF-IDF:
+python tfidf_runner.py
+
+----------------------------------------------------------------------------------------------------
+
+Word2Vec:
+python word2vec_runner.py
+
+----------------------------------------------------------------------------------------------------
+
+comparison_runner.py:
+python comparison_runner.py
