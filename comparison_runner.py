@@ -103,7 +103,7 @@ if __name__ == "__main__":
         "Intermediate Query": "This cute cat named sunny",
         "Advanced Query": "An adorably mischievous feline, affectionately named Sunny, graced the household with her playful antics and gentle purring, embodying the perfect blend of charm and curiosity."
     }
-    #run_comparison(query)
+    run_comparison(queries)
     for title, query in queries.items():
         print(f"\nRunning for {title}: {query}")
         run_query_and_evaluate(query, path, plot_title=f"{title} Precision-Recall Curve")
