@@ -30,6 +30,6 @@ def run_tfidf_search(query, topN=10):
         console.print(top_article)
 
 if __name__ == "__main__":
-    #query = "Airplane in Berlin started in morning but landed in the evening."
+    query = "Airplane in Berlin started in morning but landed in the evening."
     
     run_tfidf_search(query)

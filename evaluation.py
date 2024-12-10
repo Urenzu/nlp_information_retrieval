@@ -60,18 +60,15 @@ def calculate_map(precision, relevance_labels):
     ]
     return np.mean(average_precision) if average_precision else 0.0
 
-def evaluate_and_plot(
-    tfidf_results, word2vec_results, relevance_labels_tfidf, relevance_labels_w2v, plot_title
-):
+def evaluate_and_plot(tfidf_results, word2vec_results, relevance_labels_tfidf, relevance_labels_w2v):
     """
-    Evaluate and compare TF-IDF and Word2Vec results and plot combined precision-recall curves.
+    Evaluate and compare TF-IDF and Word2Vec results.
 
     Args:
         tfidf_results: Ranked document IDs for TF-IDF.
         word2vec_results: Ranked document IDs for Word2Vec.
         relevance_labels_tfidf: Relevance labels for TF-IDF results.
         relevance_labels_w2v: Relevance labels for Word2Vec results.
-        plot_title: Title for the precision-recall plot.
     """
     # TF-IDF evaluation
     tfidf_precision, tfidf_recall, _ = calculate_precision_recall(
@@ -88,16 +85,8 @@ def evaluate_and_plot(
     print(f"Word2Vec AP: {w2v_map:.4f}")
 
     # Plot combined precision-recall curves
-    plt.figure(figsize=(8, 6))
-    plt.plot(tfidf_recall, tfidf_precision, marker="o", label="TF-IDF")
-    plt.plot(w2v_recall, w2v_precision, marker="x", label="Word2Vec")
-    plt.xlabel("Recall")
-    plt.ylabel("Precision")
-    plt.title(plot_title)
-    plt.legend()
-    plt.grid()
-    plt.show()
-    
+    plot_combined_precision_recall_curve(tfidf_precision, tfidf_recall, w2v_precision, w2v_recall)
+
 # Example Usage
 if __name__ == "__main__":
 
