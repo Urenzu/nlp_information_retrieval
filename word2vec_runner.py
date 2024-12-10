@@ -37,5 +37,6 @@ def run_word2vec_search(query, topN=5):
         console.print(top_article)
 
 if __name__ == "__main__":
-    query = "Airplane in Berlin started in morning but landed in the evening."
+    #query = "Airplane in Berlin started in morning but landed in the evening."
+    
     run_word2vec_search(query)
