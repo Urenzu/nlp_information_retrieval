@@ -4,18 +4,21 @@ Setup (Run within powershell):
 
 python -m venv venv
 
-.\venv\Scripts\activate(On MacOS/Linux: source venv/bin/activate)
+.\venv\Scripts\activate
 
 pip install beautifulsoup4
 pip install nltk
 pip install scikit-learn
-pip install numpy
-pip install gensim
+pip install numpy==1.23.5
+pip install gensim==4.3.2
 pip install tqdm
 pip install torch
 pip install rich
-pip install pickle
-pip install matplotlib
+pip install transformers
+pip install rank_bm25
+pip install spacey
+pip install fasttext
+
 
 python
 
@@ -37,10 +40,28 @@ python word2vec_runner.py
 
 ----------------------------------------------------------------------------------------------------
 
+Experimental Word2Vec:
+(Model takes a long time to train and is not included within test scripts "comparison_runner.py" and "tests.py".)
+
+python experimental_word2vec.py
+
+----------------------------------------------------------------------------------------------------
+
+Transformer:
+(Extra model to enhance the project scope and experiement.)
+
+python extra_transformer.py
+
+-> then enter your query 
+
+----------------------------------------------------------------------------------------------------
+
 comparison_runner.py:
+(Compares tfidf and word2vec models.)
 python comparison_runner.py
 
 ----------------------------------------------------------------------------------------------------
 
 tests.py
+(Compares tfidf and word2vec models.)
 python tests.py
